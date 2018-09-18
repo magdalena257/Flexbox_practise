@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator</title>
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <style>
+        /* wykorzystaj body do wycentrowania kalkulatora za pomocą flexboxa */
+
+        /* nie można zmieniać struktury html */
+
+        /* kalkulator ma 60% szerokości body ale nie mniej niz 500px */
+
+        /* wyświetlacz wyniku ma 15vh wysokości */
+
+        /* przyciski mają 10vh wysokości */
+
+        /* Panel bez wyświetlacza ma mieć wysokość 70vh (czyli z wyświetlaczem 85vh)*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            font-family: 'Saira', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10vh;
+        }
+
+        .panel {
+            margin: auto;
+            width: 40vw;
+            min-width: 400px;
+            margin-top: 5vh;
+            height: 75vh;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .result~div {
+            box-sizing: border-box;
+            background-color: rgb(73, 142, 165);
+            flex-basis: 30%;
+            height: calc(60vh/7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+        }
+
+        div.result {
+            height: 15vh;
+            flex-basis: 100%;
+            background-color: black;
+            color: white;
+            font-size: 60px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+        }
+
+        .result~div:nth-last-child(1),
+        .result~div:nth-last-child(2) {
+            flex-basis: 48%;
+        }
+
+        .panel .result~div:hover {
+            background-color: rgb(117, 180, 201);
+        }
+
+        .panel .result~div:active {
+            box-shadow: 0 0 2px grey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>A responsive calculator layout using flexbox.</h1>
+    <div class="panel">
+        <div class="result">2 343.99</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>+</div>
+        <div>0</div>
+        <div>-</div>
+        <div>/</div>
+        <div>.</div>
+        <div>*</div>
+        <div>C</div>
+        <div>=</div>
+    </div>
+</body>
+
+</html>
